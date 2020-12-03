@@ -1,6 +1,6 @@
 import java.awt.Color;
 
-public class HPDruckerAdapter() implements Drucker {
+public class HPDruckerAdapter implements Drucker {
 	
 	private HPDrucker spezDrucker;
 
@@ -11,9 +11,9 @@ public class HPDruckerAdapter() implements Drucker {
 	@Override
 	public void print(Color color) {
 		int c, m, y;
-		c = 255 - color.r;
-		m = 255 - color.g;
-		y = 255 - color.b;
+		c = 255 - color.getRed();
+		m = 255 - color.getGreen();
+		y = 255 - color.getBlue();
 
 		spezDrucker.print(c, m, y);
 	}
