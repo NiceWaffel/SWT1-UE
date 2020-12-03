@@ -1,4 +1,6 @@
+import java.awt.Color;
+
 public interface Drucker {
 
-	public void print(int c, int m, int y);
+	public void print(Color color);
 }
