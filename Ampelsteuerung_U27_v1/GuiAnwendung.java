@@ -38,7 +38,6 @@ public class GuiAnwendung {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				System.out.println("Shutting down...");
-				ampelController.stop();
 				System.exit(0);
 			}
 
