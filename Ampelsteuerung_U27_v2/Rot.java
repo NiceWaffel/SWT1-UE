@@ -1,14 +1,18 @@
 import java.awt.Color;
+import java.awt.Graphics2D;
 
 public class Rot implements Farbe {
 
-	public Farbe umschalten(boolean nachtbetrieb) {
-		if(nachtbetrieb)
+	@Override
+	public Farbe umschalten() {
+		if (Ampelschaltplan.getAmpelschaltplan().isNachtbetrieb())
 			return new GelbBlinkend();
 		return new Orange();
 	}
 
-	public Color getAnzeigeFarbe() {
-		return Color.RED;
+	@Override
+	public void updateGraphics(Graphics2D g, int x) {
+		g.setColor(Color.RED);
+		g.fillOval(x, 100, 40, 40);
 	}
 }
