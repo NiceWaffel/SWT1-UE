@@ -26,8 +26,6 @@ public class CommandProcessor {
         }
     }
 
-    ICH MUSS NOCH NEN NEUEN ORDNER FÜR DIE U29 ANLEGEN UND DIE V2 WIEDER KLONEN!!!!!
-
     public static CommandProcessor getCommandProcessor() {
         if(singleton == null)
             singleton = new CommandProcessor();
