@@ -13,14 +13,22 @@ public class Ampelschaltplan {
 
 	private GuiAnwendung gui;
 
+	private CommandProcessor commandProcessor;
+
 	public static void main(String[] args) {
 		singleton = new Ampelschaltplan();
 	}
 
+	public CommandProcessor getCommandProcessor() {
+		return commandProcessor;
+	}
+
 	private Ampelschaltplan() {
-        this.nachtbetrieb = false;
-        hauptAmpel = new Ampel(new Gruen());
-        nebenAmpel = new Ampel(new Rot());
+		this.nachtbetrieb = false;
+		hauptAmpel = new Ampel(new Gruen());
+		nebenAmpel = new Ampel(new Rot());
+
+		commandProcessor = new CommandProcessor();
 
         gui = new GuiAnwendung();
 

@@ -87,7 +87,7 @@ public class GuiAnwendung {
 		verdoppelButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				CommandProcessor.getCommandProcessor().execute(new UmschaltzeitenVerdoppeln());
+				Ampelschaltplan.getAmpelschaltplan().getCommandProcessor().execute(new UmschaltzeitenVerdoppeln());
 			}
 		});
 		frame.add(verdoppelButton);
@@ -97,7 +97,7 @@ public class GuiAnwendung {
 		printButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				CommandProcessor.getCommandProcessor().execute(new UmschaltzeitenAusgeben());
+				Ampelschaltplan.getAmpelschaltplan().getCommandProcessor().execute(new UmschaltzeitenAusgeben());
 			}
 		});
 		frame.add(printButton);
@@ -107,7 +107,7 @@ public class GuiAnwendung {
 		fussgaengerButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				CommandProcessor.getCommandProcessor().execute(new FussgaengerAmpel());
+				Ampelschaltplan.getAmpelschaltplan().getCommandProcessor().execute(new FussgaengerAmpel());
 			}
 		});
 		frame.add(fussgaengerButton);
@@ -117,7 +117,7 @@ public class GuiAnwendung {
 		undoButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				CommandProcessor.getCommandProcessor().undo(1);
+				Ampelschaltplan.getAmpelschaltplan().getCommandProcessor().undo(1);
 			}
 		});
 		frame.add(undoButton);
