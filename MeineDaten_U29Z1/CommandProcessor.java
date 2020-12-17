@@ -2,8 +2,6 @@ import java.util.Stack;
 
 public class CommandProcessor {
 
-    private static CommandProcessor singleton;
-
     private Stack<ICommandWithUndo> history = new Stack<>();
 
     public void execute(ICommand command) {
@@ -22,11 +20,5 @@ public class CommandProcessor {
             ICommandWithUndo com = history.pop();
             com.undo();
         }
-    }
-
-    public static CommandProcessor getCommandProcessor() {
-        if(singleton == null)
-            singleton = new CommandProcessor();
-        return singleton;
     }
 }

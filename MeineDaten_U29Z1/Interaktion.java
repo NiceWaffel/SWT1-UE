@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class Interaktion {
 
     public static void main(String[] args) {
-        new Interaktion();
-    }
-
-    public Interaktion() {
         Scanner sc = new Scanner(System.in);
+
+        CommandProcessor commandProcessor = new CommandProcessor();
 
         boolean wiederhole = true;
         while(wiederhole) {
@@ -22,19 +20,19 @@ public class Interaktion {
             int antwort = Integer.parseInt(sc.nextLine());
             switch(antwort) {
                 case 1:
-                    CommandProcessor.getCommandProcessor().execute(new QuadriereA());
+                    commandProcessor.execute(new QuadriereA());
                     break;
                 case 2:
-                    CommandProcessor.getCommandProcessor().execute(new SchoeneRechnung());
+                    commandProcessor.execute(new SchoeneRechnung());
                     break;
                 case 3:
-                    CommandProcessor.getCommandProcessor().execute(new Mischen());
+                    commandProcessor.execute(new Mischen());
                     break;
                 case 4:
-                    CommandProcessor.getCommandProcessor().undo(1);
+                    commandProcessor.undo(1);
                     break;
                 case 5:
-                    CommandProcessor.getCommandProcessor().execute(new Ausgeben());
+                    commandProcessor.execute(new Ausgeben());
                     break;
                 case 6:
                     wiederhole = false;

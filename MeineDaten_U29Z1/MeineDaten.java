@@ -7,9 +7,9 @@ public class MeineDaten {
     private int c;
 
     private MeineDaten() {
-        a = (int) (Math.random() * 400);
-        b = (int) (Math.random() * 400);
-        c = (int) (Math.random() * 400);
+        a = (int) (Math.random() * 100);
+        b = (int) (Math.random() * 100);
+        c = (int) (Math.random() * 100);
     }
 
     public int getC() {
