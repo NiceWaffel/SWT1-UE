@@ -69,7 +69,7 @@ public class GuiAnwendung {
 				Ampelschaltplan.getAmpelschaltplan().getHauptAmpel().getFarbe().updateGraphics(g2d, 80);
 				Ampelschaltplan.getAmpelschaltplan().getNebenAmpel().getFarbe().updateGraphics(g2d, 280);
 
-				// Ampelleutchten Outlines
+				// Ampelleuchten Outlines
 				g2d.setColor(Color.BLACK);
 				g2d.drawOval(79, 99, 41, 41);
 				g2d.drawOval(79, 149, 41, 41);
